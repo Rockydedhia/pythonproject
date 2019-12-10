@@ -25,6 +25,3 @@ print(line.readline())
 
     else:
         print('word not found')
-##
-##
-##
