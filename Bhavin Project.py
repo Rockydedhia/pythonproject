@@ -1,10 +1,10 @@
 import pyttsx3  # pip install pyttsx3
 import speech_recognition as sr  # pip install speechRecognition
-import datetime
+import datetime # for data time
 import wikipedia  # pip install wikipedia
-import webbrowser
-import os
-import smtplib
+import webbrowser # to support web browser
+import os # interacting with internal files of system
+import smtplib # sending Email
 
 
 engine = pyttsx3.init('sapi5')
@@ -103,15 +103,14 @@ if __name__ == "__main__":
         elif 'stop' in query:
             speak("Jaarvis signing off")
             exit = exit()
-            #speak(f"Jaarvis signing off",exit)
 
         elif 'email to harry' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "harryyourEmail@gmail.com"
+                to = "bhavindedhia09@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry my friend harry bhai. I am not able to send this email")
+                speak("Sorry my friend Bhavin. I am not able to send this email")
